@@ -1,0 +1,21 @@
+# File: H3_scan_3D.inp
+
+# Using a single point (SP) calculation for a rigid scan
+! B3LYP def2-TZVP
+
+%paras
+    # Var 1: Bond H1-H2 from 0.8 to 1.2 in 20 steps
+    R = 0.55, 1.55, 20
+
+    # Var 2: Bond H2-H3 from 0.8 to 1.2 in 20 steps
+    Q = 0.55, 1.55, 20
+	
+	T = 40, 180, 7
+end
+
+# Ground state doublet
+*int 0 2
+   H   0 0 0 0.000000   0.000000   0.000000  # Atom 0 (H1)
+   H   1 0 0 {R}        0.000000   0.000000  # Atom 1 (H2)
+   H   2 1 0 {Q}        {T]        0.000000  # Atom 2 (H3)
+*

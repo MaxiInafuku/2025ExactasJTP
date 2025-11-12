@@ -1,0 +1,8 @@
+! B3LYP def2-SVP Opt freq
+! TightSCF
+
+* int 0 1  # Using internal coordinates for a neutral singlet molecule
+O  0  0  0    0.000    0.000    0.000
+O  1  0  0    1.278    0.000    0.000
+O  2  1  0    1.278    116.0    0.000
+*
